@@ -4,4 +4,5 @@ $(document).ready(function(){
         .modal('show')
         ;
     })
+    $('div.ui.dropdown').dropdown()
 })
