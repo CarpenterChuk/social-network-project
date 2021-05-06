@@ -25,6 +25,7 @@ urlpatterns = [
     path('profiles/', include('profiles.urls', namespace='profiles')),
     path('posts/', include('posts.urls', namespace='posts')),
     path('accounts/', include('allauth.urls')),
+    path('stat/', include('stat_api.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

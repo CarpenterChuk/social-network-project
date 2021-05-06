@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'rest_framework',
 
     'allauth',
     'allauth.account',
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
 
     'posts',
     'profiles',
+    'stat_api',
 ]
 
 SITE_ID = 1
@@ -61,6 +63,11 @@ if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
