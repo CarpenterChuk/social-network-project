@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  web:
+    build: ./devgram
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./devgram:/devgram
+    ports:
+      - 8000:8000
